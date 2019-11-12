@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css?family=Antic+Slab');
+body {
+  background: rgb(209, 199, 199);
+  font-family: 'Antic Slab', sans-serif;
+}
+
+.login-container {
+  width: 400px;
+  margin: 1em auto;
+  border-radius: 20px;
+  border: 2px solid #65ca9e;
+  text-align: center;
+  padding-bottom: 0px;
+  background: #241e20;
+  min-width:310px;
+}
+
+h1 {
+  color:#65ca9e;
+  text-shadow:2px 2px 2px #111;
+  letter-spacing:2px;
+  border-bottom:1px solid #444;
+  padding-bottom:20px;
+}
+
+.login-container .form-group {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.check {
+  padding: 10px 10px 10px 10px;
+  font-size: 14px;
+  color: #65ca9e;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10px 10px 10px 10px;
+  
+}
+
+input#email, input#name, input#pwd {
+  padding: 10px 10px 10px 10px;
+  min-width: 250px;
+  font-size: 14px;
+  color: #333;
+  border-radius: 10px;
+  border: 1px solid #222;
+  background:#fefffffb;
+  box-shadow:inset 5px 3px 6px 0px #999;
+}
+
+.login-container .form-group label {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  color:#65ca9e;
+  font-size:18px;
+  letter-spacing:2px;
+}
+
+.login-container .form-group input[type=submit] {
+  border: 1px solid #241e20;
+  background: #65ca9e;
+  padding: 10px;
+  min-width: 160px;
+  font-family: 'helvetica', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  color: #241e20;
+  border-radius:10px;
+}
+
+
+@media screen and (max-width:450px)
+{
+  .login-container
+  {
+    width:50%
+  }
+  input#email, input#pwd, input#name {
+  padding:15px 10px;
+  min-width:160px;
+  }
+}
+
+fieldset
+{
+  outline:0px;
+  border:0px;
+}
+legend, .sr-only
+{
+  position:absolute;
+  opacity:0;
+}
+.bordertop
+{
+  border-top:1px solid #444;
+}

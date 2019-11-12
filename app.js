@@ -27,7 +27,9 @@ mongoose.connect(DB, {
 app.use(bodyParser.json());
 
 app.get('/', function(req, res){
-  res.status(200).send('test')
+  res
+    .status(200)
+    .render('profile')
   });
 
 

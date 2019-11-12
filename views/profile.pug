@@ -1,0 +1,25 @@
+doctype html(lang='en')
+head
+    meta(charset='UTF-8')  
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')  
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')  
+    link(rel='stylesheet', href='/css/style.css')
+    title Subscribe
+
+body
+  .login-container
+    h1 Subscribe to Newsletter
+    form(action='#', method='post')
+      fieldset
+        legend Info form    
+        .form-group
+          label(for='name') Name     
+          input#name(autocomplete='on',  name='name', placeholder='name', type='text', required='')     
+        .form-group
+          label(for='email') Email       
+          input#email(autocomplete='on', name='email', placeholder='email', type='email', required='')
+        .check
+          input(type="checkbox", required='') 
+          label(for="age consent") I am over 18
+        .form-group
+          input(type='submit', value='Subscribe')
