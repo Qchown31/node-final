@@ -23,6 +23,9 @@ mongoose.connect(DB, {
   console.log('error')
 }) 
 
+
+app.use(bodyParser.json());
+
 app.get('/', function(req, res){
   res.status(200).send('test')
   });
