@@ -6,22 +6,24 @@ head
     link(rel='stylesheet', href='/css/style.css')
     title Subscribe
 
-include ./partials/header
 
 body
-  .login-container
-    h1 Subscribe to Newsletter 
-    form(action='#', method='post')
-      fieldset
-        legend Info form    
-        .form-group
-          label(for='name') Name     
-          input#name(autocomplete='on',  name='name', placeholder='name', type='text', required='')     
-        .form-group
-          label(for='email') Email       
-          input#email(autocomplete='on', name='email', placeholder='email', type='email', required='')
-        .check
-          input(type="checkbox", required='') 
-          label(for="age consent") I am over 18
-        .form-group
-          input(type='submit', value='Subscribe')
+  div#formspacer
+    include ./partials/header
+    .login-container
+      h1 Subscribe to Newsletter 
+      form(action='#', method='post')
+        fieldset
+          legend Info form    
+          .form-group
+            label(for='name') Name     
+            input#name(autocomplete='on',  name='name', placeholder='name', type='text', required='')     
+          .form-group
+            label(for='email') Email       
+            input#email(autocomplete='on', name='email', placeholder='email', type='email', required='')
+          .check
+            input(type="checkbox", required='') 
+            label(for="age consent") I am over 18
+          .form-group
+            input(type='submit', value='Subscribe')
+  include ./partials/footer

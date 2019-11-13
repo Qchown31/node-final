@@ -8,9 +8,12 @@ head
 
 include ./partials/header
 
-ul 
-each post in articleList
-  li= post.title
-  li= post.summary
-  li= post.body 
-  br
+div#postcontainer
+  each post in articleList
+    div#post
+      h2#title= post.title
+      p#summ= post.summary
+      p#body= post.body 
+      br
+
+include ./partials/footer

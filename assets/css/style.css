@@ -3,8 +3,98 @@
 body {
   background: rgb(209, 199, 199);
   font-family: 'Antic Slab', sans-serif;
+  margin: 0;
 }
 
+/* Header */
+nav {
+  position: fixed;
+  min-width: 100vw;
+  background-color: #241e20;
+  padding: 10px;
+  margin: 0;
+ 
+}
+
+
+  padding:50px
+}
+
+a {
+  text-decoration: none;
+  background-color: #65ca9e;
+  color: #241e20;
+  padding: 10px 20px ;
+  border-radius: 10px;
+  font-size: 18px;
+  
+}
+
+
+
+#header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+/* footer */
+#formspacer {
+  margin: 0;
+  padding: 0;
+  height: 90vh;
+
+}
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #241e20;
+  color: #65ca9e;
+  margin: 15px auto 0 auto;
+}
+/* /posts page */
+#postcontainer{
+  display: grid;
+  grid-template-columns:1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+}
+#post {
+  background-color: #241e20;
+  margin:auto;
+  width: 70vw;
+  max-width: 800px;
+  border: 2px solid #65ca9e;
+  border-radius: 20px;
+  padding: 10px 20px 10px 20px;
+}
+#summ, #body {
+  color: rgb(226, 211, 211);
+  /* margin: 10px; */
+}
+
+h2 {
+  text-align: center;
+  color:#65ca9e;
+  /* text-shadow:1px 1px 1px #65ca9e; */
+  letter-spacing:2px;
+}
+
+
+
+
+/* user subscribe page */
+h1 {
+  color:#65ca9e;
+  text-shadow:2px 2px 2px #111;
+  letter-spacing:2px;
+  border-bottom:1px solid #444;
+  padding-bottom:20px;
+}
 .login-container {
   width: 400px;
   margin: 1em auto;
@@ -14,14 +104,6 @@ body {
   padding-bottom: 0px;
   background: #241e20;
   min-width:310px;
-}
-
-h1 {
-  color:#65ca9e;
-  text-shadow:2px 2px 2px #111;
-  letter-spacing:2px;
-  border-bottom:1px solid #444;
-  padding-bottom:20px;
 }
 
 .login-container .form-group {
