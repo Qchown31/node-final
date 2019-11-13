@@ -3,12 +3,12 @@ const router = express.Router();
 const User = require('.././models/usersModel')
 
 router
-  .get('/sign-up', function(req, res){
+  .get('/subscribe', function(req, res){
     res
       .status(200)
       .render('profile')
     })
-  .post('/sign-up', (req, res) => {
+  .post('/subscribe', (req, res) => {
     const addUser =  new User ({
       name: req.body.name,
       email: req.body.email,
@@ -19,7 +19,7 @@ router
     .status(200)
     .render('index')
   })
-
+  
 
 
 

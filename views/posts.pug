@@ -9,5 +9,8 @@ head
 include ./partials/header
 
 ul 
-each post in article[0]
-  li= title
+each post in articleList
+  li= post.title
+  li= post.summary
+  li= post.body 
+  br

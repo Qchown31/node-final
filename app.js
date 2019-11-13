@@ -35,8 +35,8 @@ app.use('/', postRouter)
 app.use('/', userRouter)
 
 
-// cathing all unexpected URLs
-app.use(function(req, res, err) {
+// cathing all unexpected requests 
+app.all('*', (req, res, err) => {
   res.status(404);
   res.send('404: File Not Found');
 });

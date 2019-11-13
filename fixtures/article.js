@@ -3,7 +3,7 @@
 - https://en.wikipedia.org/ 
 */
 
-articleList = [
+ articleList = [
   {
     title: 'Syntax Parser',
     summary: "A program that reads your code and determines what it does and if it's grammar is valid",
