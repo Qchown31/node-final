@@ -1,4 +1,4 @@
-// require your dependencies here
+const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema(
   {
@@ -18,4 +18,5 @@ const userSchema = new mongoose.Schema(
 );
 
 const User = mongoose.model('Subscribers', userSchema);
-// export your model here
+
+module.exports = User;

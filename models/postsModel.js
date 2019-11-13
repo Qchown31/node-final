@@ -1,5 +1,6 @@
 
-// require your dependencies here
+const mongoose = require('mongoose')
+
 
 const articleSchema = new mongoose.Schema(
   {
@@ -22,4 +23,6 @@ const articleSchema = new mongoose.Schema(
   }
 );
 
-// export your model here
+const Article = mongoose.model('Posts', articleSchema);
+
+module.exports = Article;
