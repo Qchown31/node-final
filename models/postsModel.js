@@ -23,6 +23,6 @@ const articleSchema = new mongoose.Schema(
   }
 );
 
-const Article = mongoose.model('Posts', articleSchema);
+const articles = mongoose.model('articles', articleSchema);
 
-module.exports = Article;
+module.exports = articles;

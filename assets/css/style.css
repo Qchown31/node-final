@@ -21,7 +21,7 @@ nav {
   padding:50px
 }
 
-a {
+ul > li > a {
   text-decoration: none;
   background-color: #65ca9e;
   color: #241e20;
@@ -58,6 +58,11 @@ footer {
   margin: 15px auto 0 auto;
 }
 /* /posts page */
+#newpost {
+  background-color: none;
+  text-decoration: none;
+}
+
 #postcontainer{
   display: grid;
   grid-template-columns:1fr;

@@ -7,13 +7,17 @@ head
     title Articles
 
 include ./partials/header
-
 div#postcontainer
-  each post in articleList
+  div#post 
+      a#newpost(href='addNewPost')
+        h2 Add a New Article 
+  each post in articles
     div#post
       h2#title= post.title
       p#summ= post.summary
       p#body= post.body 
       br
-
+  div#post 
+    a#newpost(href='addNewPost')
+      h2 Add a New Article 
 include ./partials/footer
