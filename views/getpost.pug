@@ -5,19 +5,17 @@ head
     meta(http-equiv='X-UA-Compatible', content='ie=edge')  
     link(rel='stylesheet', href='/css/style.css')
     title Articles
-
+    style.
+      footer {
+        position:absolute;
+        bottom:0;
+        margin-top:15px;
+      }
 include ./partials/header
 div#postcontainer
-  div#post 
-      a#newpost(href='/addNewPost')
-        h2 Add a New Article 
-  each post in articles
-    div#post
-      h2#title= post.title
-      p#summ= post.summary
-      p#body= post.body
-      br
-  div#post 
-    a#newpost(href='/addNewPost')
-      h2 Add a New Article 
+  div#post
+    h2#title= Article.title
+    p#summ= Article.summary
+    p#body= Article.body 
+    br
 include ./partials/footer

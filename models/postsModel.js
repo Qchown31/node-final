@@ -1,7 +1,6 @@
 
 const mongoose = require('mongoose')
-
-
+const slugify = require('slugify')
 const articleSchema = new mongoose.Schema(
   {
     title: {
@@ -23,6 +22,9 @@ const articleSchema = new mongoose.Schema(
     }
   }
 );
+
+
+
 
 const articles = mongoose.model('articles', articleSchema);
 
