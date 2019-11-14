@@ -17,7 +17,7 @@ router
     addUser.save()
     res
     .status(200)
-    .render('index')
+    .render('thankyou')
   })
   
 

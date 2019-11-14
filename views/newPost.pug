@@ -1,0 +1,29 @@
+doctype html(lang='en')
+head
+    meta(charset='UTF-8')  
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')  
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')  
+    link(rel='stylesheet', href='/css/style.css')
+    title Subscribe
+
+
+body
+  div#formspacer
+    include ./partials/header
+    .addnew-container
+      h1 Add New Article
+      form(action='#', method='post')
+        fieldset
+          legend New Post Form   
+          .form-group
+            label(for='title') Title     
+            input#title(  name='title', placeholder='title', type='text', required='')     
+          .form-group
+            label(for='summary') Summary       
+            input#summary( name='summary', placeholder='summary', type='text', required='')
+          .form-group
+            label(for='body') Body       
+            textarea#body( name='body', placeholder='body', type='textbody', required='')
+          .form-group
+            input(type='submit', value='Add')
+  include ./partials/footer
