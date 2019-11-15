@@ -259,13 +259,15 @@ textarea#body{
 
 /* drinks api */
 @import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
-
+div#container {
+  padding-bottom: 200px;
+}
 h3 {
 margin: auto;
 color: #65ca9e;
 background-color: #241e20;
 padding: 20px;
-width: 300px;
+width: 400px;
 border-radius: 20px;
 }
 ul {
