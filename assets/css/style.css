@@ -260,7 +260,14 @@ textarea#body{
 /* drinks api */
 @import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
 
-
+h3 {
+margin: auto;
+color: #65ca9e;
+background-color: #241e20;
+padding: 20px;
+width: 300px;
+border-radius: 20px;
+}
 ul {
   list-style: none;
 }

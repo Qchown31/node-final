@@ -11,7 +11,7 @@ router
       .status(200)
       .render('index')
     })
-
+// redner the articles from the DB on the page
   .get('/articles',(req, res, next) => {
     articles.find({}, (err, articles) =>{
       if (err)
@@ -27,15 +27,17 @@ router
         .status(200)
         .render('newPost')
       })
-      
+      // takes what you put in the forms and adds it to the bottom of the page while saving to the DB
   .post('/addNewPost', async (req, res) => {
       const addArticle = await new articles ({
         title: req.body.title,
         summary: req.body.summary,
         body: req.body.body,
+        // used slugify to make sure it has the same format as the articles you supplied us with
         slug: slugify(req.body.title, { lower: true })
         
       })
+      // was planning on using the setTimeout function to build 3 loading dots but ran out of time so didn't get around to it
       setTimeout(async function(){
        await addArticle.save();
       articles.find({}, (err, articles) =>{
@@ -47,32 +49,22 @@ router
         })
     },1000 )
     })
-
-    .get('/articles/:slug', function(req, res){
+// set up findOne to load one article at a time 
+    .get('/articles/:slug', async function(req, res){
       var article = req.params.slug;  
       
-      articles.findOne({slug : article}, function(res, req, err, result)
-      
+      var article = await articles.findOne({slug : article}, function(err, result)
       {      
 
         if  (err) {
           res.send('error')
         }
-
-        var Article = {
-          title : result.title,
-          summary : result.summary,
-          body : result.body,   
-          
-        } 
-        
-        res.render('getpost',
-          {Article : Article}
-          
-        );
-       
-      })
-    })
+      return result
+      
+      });  
+      res.render('getpost',
+      {Article : article}
+    )}) ;
 
   
       

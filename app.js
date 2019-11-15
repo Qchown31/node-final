@@ -28,9 +28,9 @@ mongoose.connect(DB, {
   console.log('error')
 }) 
 
-// use this to poarse data to json
+// use this to parse data to json
 app.use(bodyParser.json());
-
+// running my routes
 app.use('/', postRouter)
 app.use('/', userRouter)
 

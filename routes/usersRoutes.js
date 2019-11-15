@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const User = require('.././models/usersModel')
-
+// using the subscribe page to add the user to the DB
 router
   .get('/subscribe', function(req, res){
     res
